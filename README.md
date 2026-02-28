@@ -1,16 +1,27 @@
-# camera
+# Camera App 📸
 
-A new Flutter project.
+## 🚀 Функционал
+- **Главный экран**: Сетка сохраненных фотографий с автоматическим обновлением.
+- **Кастомная камера**: 
+  - Режим Full-screen превью.
+  - Управление вспышкой (On/Off/Torch).
+  - Таймер задержки на 3 секунды с визуальным обратным отсчетом.
+  - Стилизованный UI с полупрозрачными оверлеями.
+- **Хранение данных**: Сохранение путей к изображениям в локальное хранилище (Shared Preferences).
 
-## Getting Started
+## 🛠 Стек и Архитектура
+Приложение написано с использованием **Feature-first Clean Architecture**.
 
-This project is a starting point for a Flutter application.
+**Структура проекта:**
+- `core/`: Общие сервисы и работа с данными (StorageService).
+- `features/`: Логика, разделенная по фичам (places, camera).
+- `uikit/`: Переиспользуемые UI-компоненты (кнопки, карточки).
+- `api/service/`: Инкапсуляция работы с нативными плагинами (CameraService).
 
-A few resources to get you started if this is your first Flutter project:
+**State Management:**
+- [Provider](https://pub.dev/packages/provider) — выбран за легковесность и отличную интеграцию с Flutter для небольших и средних проектов.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## 📦 Используемые пакеты
+- `camera`: Работа с видеопотоком и фото.
+- `shared_preferences`: Локальное хранение списка путей.
+- `provider`: Управление состоянием приложения.
